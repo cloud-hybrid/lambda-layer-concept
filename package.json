@@ -6,7 +6,7 @@
     "repository": "git+https://github.com/cloud-hybrid/lambda-layer-concept",
     "main": "index.js",
     "scripts": {
-        "build": "cd scripts && npm run build-layer"
+        "build": "cd scripts && npm run build"
     },
     "dependencies": {
         "@cloud-technology/lambda-layer-concept": "cloud-hybrid/lambda-layer-concept#Development",
