@@ -1,0 +1,1 @@
+console.debug(require("util").inspect(require("../src"), { showHidden: true, depth: Infinity, sorted: true, colors: true, getters: true, compact: false}));

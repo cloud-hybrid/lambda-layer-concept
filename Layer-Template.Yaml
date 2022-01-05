@@ -1,0 +1,39 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: "AWS::Serverless-2016-10-31"
+
+Description: |
+    Lambda Layer Serverless CFN Transformation Template.
+
+Parameters:
+    Name:
+        Type: String
+        Description: Lambda Layer Name
+        Default: "Lambda-Layer-Artifacts"
+
+
+Resources:
+    # Example Function Inclusion
+    # >>> Function:
+    # >>>     Type: AWS::Serverless::Function
+    # >>>     Properties:
+    # >>>         Handler: index.handler
+    # >>>         Runtime: nodejs14.x
+    # >>>         CodeUri: src
+    # >>>         Description: Call the AWS Lambda API
+    # >>>         Timeout: 10
+    # >>>         Policies:
+    # >>>             - AWSLambdaBasicExecutionRole
+    # >>>             - AWSLambda_ReadOnlyAccess
+    # >>>             - AWSXrayWriteOnlyAccess
+    # >>>         Tracing: Active
+    # >>>         Layers:
+    # >>>             - !Ref Dependencies
+
+    Dependencies:
+        Type: AWS::Serverless::LayerVersion
+        Properties:
+            LayerName: !Ref Name
+            Description: Dependencies for Lambda Function(s)
+            ContentUri: artifacts
+            CompatibleRuntimes:
+                - nodejs14.x

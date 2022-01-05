@@ -1,0 +1,9 @@
+{
+    "name": "$",
+    "type": "module",
+    "author": "Jacob B. Sanders",
+    "scripts": {
+        "setup": "node install.js",
+        "build": "npm run setup && node build.js"
+    }
+}

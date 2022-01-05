@@ -1,0 +1,15 @@
+{
+    "name": "@cloud-technology/lambda-layer-concept",
+    "private": true,
+    "version": "0.1.3",
+    "description": "Lambda Layer Dependencies Proof of Concept",
+    "repository": "git+https://github.com/cloud-hybrid/lambda-layer-concept",
+    "main": "index.js",
+    "scripts": {
+        "build": "cd scripts && npm run build-layer"
+    },
+    "dependencies": {
+        "@cloud-technology/lambda-layer-concept": "cloud-hybrid/lambda-layer-concept#Development",
+        "uuid": "^8.3.2"
+    }
+}
